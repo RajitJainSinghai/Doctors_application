@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input {
+    @apply p-2 border rounded-md;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .print\:block {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.border-gradient-to-r {
+  border-image: linear-gradient(to right, #60A5FA, #6366F1) 1;
+}
+.imglogo {
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to center */
+  z-index: 1;
+}
+.relative {
+  position: relative;
+  z-index: 99999;
+
+}
